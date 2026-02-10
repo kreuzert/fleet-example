@@ -1,0 +1,15 @@
+---
+defaultNamespace: my-webservice
+
+labels:
+  appp: webservice
+  component: appp
+
+helm:
+  releaseName: wsrelease
+  chart: https://github.com/kreuzert/k8s-helm-example-webservice/archive/refs/heads/main.tar.gz
+  values:
+    replicaCount: 1
+    # service:
+      # type: LoadBalancer
+      # loadBalancerIP: <floating_ip>
